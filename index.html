@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!--link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!--link rel="stylesheet" href="/css/materialize.min.css"-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Portfolio</a>
+    <div class="navProfileUser">
+        <span class="navbar-text text-default" id="navUserName"></span>
+        <button class="btn btn-danger" id="logout">logout</button>
+    </div>
+</nav>
+<main>
+    <section class="add-new-project mb-5 mt-5">
+        <div class="container">
+            <button class="btn btn-success" data-toggle="modal" data-target="#addProject">Add New Project</button>
+        </div>
+    </section>
+    <section class="projects-section">
+        <div class="container">
+            <div class="row no-gutters project-list-wrapper"></div>
+        </div>
+
+    </section>
+</main>
+
+
+<!-- Modal ---->
+<div class="modal fade" id="addProject" tabindex="-1" role="dialog" aria-labelledby="addProjectLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addProjectLabel">Add Project</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form name="add-project-form" class="">
+                    <div class="form-group">
+                        <label for="projectName">Name</label>
+                        <input type="text" id="projectName" class="form-control" name="projectName">
+                    </div>
+                    <div class="form-group">
+                        <label for="projectDescription">Description</label>
+                        <textarea class="form-control" name="projectDescription" id="projectDescription"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectCategory">Category</label>
+                        <input type="text" id="projectCategory" class="form-control" name="projectCategory">
+                    </div>
+                    <div class="form-group">
+                        <label for="projectPrice">Price</label>
+                        <input type="text" id="projectPrice" class="form-control" name="projectPrice">
+                    </div>
+                    <div class="form-group">
+                        <label for="projectImg">Img</label>
+                        <input type="text" id="projectImg" class="form-control" name="projectImg">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <!--button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button-->
+                <button type="button" class="btn btn-primary btn-block">Add Project</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-functions.js"></script>
+
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/firebase.js"></script>
+<script src="js/user.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/HomeUi.js"></script>
+<script src="js/home.js"></script>
+
+
+<script>
+
+</script>
+
+</body>
+</html>
